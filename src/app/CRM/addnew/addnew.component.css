@@ -1,0 +1,7 @@
+.container {
+    margin-top: 40px;
+}
+
+input.form-control {
+    width: 500px !important;
+}
