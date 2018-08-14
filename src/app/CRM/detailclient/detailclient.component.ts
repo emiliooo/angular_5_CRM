@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CustomerService } from '../customer.service';
+import { ActivatedRoute } from '../../../../node_modules/@angular/router';
 
 @Component({
   selector: 'app-detailclient',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailclientComponent implements OnInit {
 
-  constructor() { }
+  customer: any;
+
+  constructor(private customService: CustomerService,
+              private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.loadClient();
+  }
+
+  loadClient() {
+    const id = +this.route.snapshot.params['id'];
+
+    this.customService.getCust(id).subscribe(response => {
+      this.customer = response;
+    });
+
+    
   }
 
 }

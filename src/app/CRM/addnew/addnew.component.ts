@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CustomerService } from '../customer.service';
 import { CustomerType } from '../../model';
+import { Router } from '../../../../node_modules/@angular/router';
 
 
 @Component({
@@ -10,7 +11,8 @@ import { CustomerType } from '../../model';
 })
 export class AddnewComponent implements OnInit {
 
-  constructor(private customerService: CustomerService) { }
+  constructor(private customerService: CustomerService,
+              private route: Router) { }
 
   imie;
   adres;
@@ -44,6 +46,8 @@ export class AddnewComponent implements OnInit {
       }
     }).subscribe();
     this.Clear();
+
+    this.route.navigate(['/clients']);
   }
 
 }

@@ -24,6 +24,9 @@ export class CustomerService {
   deleteCustomer(Customer) {
     return this.httpClient.delete(`${this.config.apiUrl}/customers/${Customer.id}`);
   }
+  getCust(id) {
+    return this.httpClient.get(`${this.config.apiUrl}/customers/${id}`);
+  }
 
 
 
