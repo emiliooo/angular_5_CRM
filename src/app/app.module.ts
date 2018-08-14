@@ -10,6 +10,7 @@ import { AddnewComponent } from './CRM/addnew/addnew.component';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { DetailclientComponent } from './CRM/detailclient/detailclient.component';
+import { DetailcontractComponent } from './CRM/detailcontract/detailcontract.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { DetailclientComponent } from './CRM/detailclient/detailclient.component
     ClientsComponent,
     ContractsComponent,
     AddnewComponent,
-    DetailclientComponent
+    DetailclientComponent,
+    DetailcontractComponent
   ],
   imports: [
     BrowserModule,

@@ -1,11 +1,11 @@
 <div class="jumbotron">
-  <div class="container">
+  <div class="container" *ngIf="customer">
     <div class="row">
       <div class="col-md-4">
-        Imie i Nazwisko {{ customer.name }}
+        <strong> Imie i Nazwisko </strong> {{ customer.name }}
       </div>
       <div class="col-md-4">
-        Wiek {{ customer.age }}
+        <strong> Wiek </strong> {{ customer.age }}
       </div>
       <div class="col-md-4">
         <img src="{{ customer.photoUrl }}">
@@ -13,14 +13,16 @@
     </div>
     <div class="row">
       <div class="col-md-12">
-        Opis {{ customer.description }}
+        <strong>Opis </strong> {{ customer.description }}
       </div>
     </div>
     <div class="row">
       <div class="col-md-12">
-        Ulica: {{customer.address.street }} <br>
-        Nr: {{customer.address.houseNumber }} <br>
-        Miasto: {{customer.address.city }}
+        <strong>Ulica </strong> : {{customer.address.street }}
+        <br>
+        <strong> Nr</strong> : {{customer.address.houseNumber }}
+        <br>
+        <strong> Miasto</strong> : {{customer.address.city }}
       </div>
     </div>
   </div>

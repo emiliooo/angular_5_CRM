@@ -1,3 +1,15 @@
-<p>
-  contracts works!
-</p>
+<table class="table table-info" *ngIf="contracts">
+    <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Imie i Nazwisko</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let contract of contracts">
+      <th scope="row">{{contract.customerId}}</th>
+      <td>{{contract.customerName}}</td>
+      <td><button class="btn btn-info" routerLink="/contracts/{{contract.id}}">Szczegóły</button></td>
+    </tr>
+    </tbody>
+  </table>
