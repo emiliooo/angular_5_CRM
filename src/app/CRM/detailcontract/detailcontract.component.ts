@@ -13,8 +13,14 @@ export class DetailcontractComponent implements OnInit {
 
   contractDetails;
 
+
   ngOnInit() {
     this.loadData();
+
+
+    setTimeout(() => {
+      console.log(this.contractDetails);
+    }, 3000);
   }
 
   loadData() {

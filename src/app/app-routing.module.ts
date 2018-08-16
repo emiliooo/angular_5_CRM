@@ -1,10 +1,10 @@
-import {NgModule} from "@angular/core";
-import {RouterModule, Route} from "@angular/router";
-import {ClientsComponent} from "./CRM/clients/clients.component";
-import {ContractsComponent} from "./CRM/contracts/contracts.component";
-import {AddnewComponent} from "./CRM/addnew/addnew.component";
-import {DetailclientComponent} from "./CRM/detailclient/detailclient.component";
-import { DetailcontractComponent } from "./CRM/detailcontract/detailcontract.component";
+import {NgModule} from '@angular/core';
+import {RouterModule, Route} from '@angular/router';
+import {ClientsComponent} from './CRM/clients/clients.component';
+import {ContractsComponent} from './CRM/contracts/contracts.component';
+import {AddnewComponent} from './CRM/addnew/addnew.component';
+import {DetailclientComponent} from './CRM/detailclient/detailclient.component';
+import { DetailcontractComponent } from './CRM/detailcontract/detailcontract.component';
 
 const APP_ROUTES : Route[] = [
   { path: '', pathMatch: 'full', redirectTo: 'clients' },
