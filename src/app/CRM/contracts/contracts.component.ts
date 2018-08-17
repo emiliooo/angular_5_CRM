@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CustomerService } from '../customer.service';
 
 @Component({
@@ -14,6 +14,8 @@ export class ContractsComponent implements OnInit {
   ngOnInit() {
     this.loadData();
   }
+
+ 
 
   loadData() {
      this.service.getContracts().subscribe(response => {

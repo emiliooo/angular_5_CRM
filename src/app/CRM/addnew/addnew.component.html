@@ -1,13 +1,13 @@
 <div class="container">
   <div class="row">
-    <form action="">
+    <form #customerForm="ngForm" >
       <div class="col-md-3">
         <div class="form-group">
           <div class="input-group input-group-sm mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="inputGroup-sizing-sm">Imie i Nazwisko</span>
             </div>
-            <input [(ngModel)]="imie" type="text" name="imie" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+            <input required [(ngModel)]="imie" type="text" name="imie" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
           </div>
         </div>
 
@@ -19,7 +19,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text" id="inputGroup-sizing-sm">Adress</span>
             </div>
-            <input [(ngModel)]="adres" type="text" name="adres" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+            <input required [(ngModel)]="adres" type="text" name="adres" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
           </div>
         </div>
       </div>
@@ -30,7 +30,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text" id="inputGroup-sizing-sm">Opis</span>
             </div>
-            <input [(ngModel)]="opis" type="text" name="opis" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+            <input required [(ngModel)]="opis" type="text" name="opis" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
           </div>
         </div>
       </div>
@@ -41,13 +41,13 @@
             <div class="input-group-prepend">
               <span class="input-group-text" id="inputGroup-sizing-sm">Wiek</span>
             </div>
-            <input [(ngModel)]="wiek" type="text" name="wiek" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+            <input  required [(ngModel)]="wiek" type="text" name="wiek" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
           </div>
         </div>
       </div>
       <div class="col-md-3">
         <div class="form-group">
-          <select class="form-control" name="type" [(ngModel)]="type">
+          <select required class="form-control" name="type" [(ngModel)]="type">
             <option [value]="CustomerType.Standard">Standard </option>
             <option [value]="CustomerType.Premium">Premium </option>
             <option [value]="CustomerType.VIP">Vip </option>
@@ -55,10 +55,9 @@
         </div>
       </div>
     </form>
-
   </div>
   <div class="row">
-    <button class="btn btn-info" (click)="add()"> DODAJ </button>
+    <button class="btn btn-info" (click)="add()" [disabled]="!customerForm.form.valid"> DODAJ </button>
   </div>
 
 
