@@ -10,21 +10,17 @@ import { ActivatedRoute } from '../../../../node_modules/@angular/router';
 export class DetailclientComponent implements OnInit , OnDestroy , OnChanges {
 
   customer: any;
-  counter = 0;
-  counterHandle: number = 0;
 
   constructor(private customService: CustomerService,
     private route: ActivatedRoute) {}
 
   ngOnInit() {
-    console.log('onInit odpalone')
+    console.log('onInit odpalone');
     this.loadClient();
-    this.counterHandle = setInterval(() => { this.counter++; }, 1000);
   }
 
   ngOnDestroy() {
-    console.log('desroy odpalone');
-    clearInterval(this.counterHandle);
+    console.log('Destroy odpalone');
   }
 
   ngOnChanges() {

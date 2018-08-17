@@ -1,22 +1,22 @@
 <table class="table table-dark">
   <thead>
-  <tr>
-    <th scope="col">ID</th>
-    <th scope="col">Imie i Nazwisko</th>
-    <th scope="col">Adress</th>
-    <th scope="col">Opis</th>
-    <th scope="col">Wiek</th>
-  </tr>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Imie i Nazwisko</th>
+      <th scope="col">Adress</th>
+      <th scope="col">Opis</th>
+      <th scope="col">Wiek</th>
+    </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let customer of customers">
-    <th scope="row">{{customer.id}}</th>
-    <td>{{customer.name}}</td>
-    <td>{{customer.address.city}}</td>
-    <td>{{customer.description}}</td>
-    <td>{{customer.age}}</td>
-    <td><button class="btn btn-info" routerLink="/detail/{{customer.id}}">Szczegóły</button></td>
-    <td><button class="btn btn-danger" (click)="deleteCustomer(customer)" >X</button></td>
-  </tr>
+    <tr *ngFor="let customer of customers">
+      <th scope="row">{{customer.id}}</th>
+      <td>{{customer.name}}</td>
+      <td>{{customer.address.city}}</td>
+      <td>{{customer.description}}</td>
+      <td>{{customer.age}}</td>
+      <td><button class="btn btn-info" routerLink="/detail/{{customer.id}}">Szczegóły</button></td>
+      <td><button class="btn btn-danger" (click)="deleteCustomer(customer)" >X</button></td>
+    </tr>
   </tbody>
 </table>
