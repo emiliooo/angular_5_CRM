@@ -1,0 +1,22 @@
+<div class="container text-center block">
+  <div class="row">
+    <div class="mx-auto card ">
+      <div class="card-header">
+        LOGOWANIE
+      </div>
+      <form class="card-body">
+        <div class="form-group">
+          <label for="">Login</label>
+          <input [(ngModel)]="login" name="login" type="text" class="form-control" id="loginenter"  placeholder="login">
+        </div>
+        <div class="form-group">
+          <label for="">Hasło</label>
+          <input [(ngModel)]="pass" name="pass" type="text" class="form-control" id="passenter"  placeholder="hasło">
+        </div>
+        <div class="form-group">
+          <button (click)="onSubmit()" class="btn btn-primary">Zaloguj</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

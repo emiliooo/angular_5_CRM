@@ -11,6 +11,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { DetailclientComponent } from './CRM/detailclient/detailclient.component';
 import { DetailcontractComponent } from './CRM/detailcontract/detailcontract.component';
+import { LoginModule } from 'src/app/CRM/login/login.module';
 
 
 @NgModule({
@@ -29,7 +30,7 @@ import { DetailcontractComponent } from './CRM/detailcontract/detailcontract.com
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]
