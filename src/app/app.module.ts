@@ -12,6 +12,8 @@ import {FormsModule} from '@angular/forms';
 import { DetailclientComponent } from './CRM/detailclient/detailclient.component';
 import { DetailcontractComponent } from './CRM/detailcontract/detailcontract.component';
 import { LoginModule } from 'src/app/CRM/login/login.module';
+import { AuthGuard } from 'src/app/CRM/auth/auth.guard';
+import { LayoutService } from './shared-module/layout.service';
 
 
 @NgModule({
@@ -32,7 +34,7 @@ import { LoginModule } from 'src/app/CRM/login/login.module';
     FormsModule,
     LoginModule
   ],
-  providers: [],
+  providers: [AuthGuard, LayoutService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
