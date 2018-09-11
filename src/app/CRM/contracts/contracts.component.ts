@@ -15,8 +15,6 @@ export class ContractsComponent implements OnInit {
     this.loadData();
   }
 
- 
-
   loadData() {
      this.service.getContracts().subscribe(response => {
       this.contracts = response;

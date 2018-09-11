@@ -4,7 +4,7 @@ import { LoginComponent } from "src/app/CRM/login/login.component";
 
 
 const LOGIN_ROUTES: Route[] = [
-  { path: 'login', component: <any>LoginComponent },
+  { path: 'login', component: <any>LoginComponent }
 ];
 
 @NgModule({

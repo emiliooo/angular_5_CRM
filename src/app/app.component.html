@@ -1,7 +1,4 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <app-header *ngIf="isSidebarVisible"></app-header>
 <router-outlet></router-outlet>
+<div class="loader" *ngIf="Loading"></div>
 
-<div *ngIf="Loading">
-  <div class="loader"></div>
-</div>

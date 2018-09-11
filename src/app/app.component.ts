@@ -8,23 +8,21 @@ import { LayoutService } from './shared-module/layout.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  Loading: boolean = false;
+  Loading: boolean = true;
 
   isSidebarVisible: boolean = false;
 
-
-  constructor(private layoutService: LayoutService, private router: Router, ) {
-    router.events.subscribe((routerEvent: Event) => this.checkEvent(routerEvent));
-  }
+  constructor(private layoutService: LayoutService, private router: Router) {}
 
   ngOnInit() {
+    this.router.events.subscribe((routerEvent: Event) => this.checkEvent(routerEvent));
+
     this.layoutService.SideBarSource.subscribe((isVisible) => {
       this.isSidebarVisible = isVisible;
     });
   }
 
-  checkEvent(routerEvent: Event): void {
-
+  private checkEvent(routerEvent: Event) {
     if (routerEvent instanceof NavigationStart) {
       this.Loading = true;
     } else if
@@ -34,7 +32,5 @@ export class AppComponent {
       this.Loading = false;
     }
   }
-
-
 
 }
